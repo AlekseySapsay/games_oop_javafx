@@ -12,17 +12,17 @@ import ru.job4j.chess.firuges.Figure;
 public class KingBlack implements Figure {
     private final Cell position;
 
-    public KingBlack(final Cell ps) {
-        position = ps;
+    public KingBlack(final Cell position) {
+        this.position = position;
     }
 
     @Override
     public Cell position() {
-        return position;
+        return this.position;
     }
 
     @Override
-    public Cell[] way(Cell dest) {
+    public Cell[] way(Cell source, Cell dest) {
         return new Cell[] {
                 dest
         };

@@ -13,9 +13,9 @@ public enum Cell {
     private final int x;
     private final int y;
 
-    Cell(int cx, int cy) {
-        x = cx;
-        y = cy;
+    Cell(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
     public int getX() {
@@ -26,6 +26,8 @@ public enum Cell {
         return y;
     }
 
+    // получаем объект из перечисления
+    // с помощью статического метода
     public static Cell findBy(int x, int y) {
         Cell rsl = null;
         for (Cell cell : values()) {
